@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        ScaleFactor.shared.setScaleFactorDevice(.iPhoneSE)
+        ScaleFactor.shared.setScaleFactorDevice(.custom)
+        ScaleFactor.shared.setCustomWidth(720)
         return true
     }
 

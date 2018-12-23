@@ -10,18 +10,18 @@ import UIKit
 
 extension CGFloat {
     
-    public var xdScaled: CGFloat {
+    public var pps: CGFloat {
         let sFD = ScaleFactor.shared.scaleFactorDevice
-        let currentDeviceHeight = UIScreen.main.nativeBounds.size.height
-        return currentDeviceHeight / sFD.rawValue
+        let currentDeviceWidth = UIScreen.main.nativeBounds.size.width
+        return currentDeviceWidth / (sFD == .custom ? ScaleFactor.shared.customWidth : sFD.rawValue)
     }
     
 }
 
 extension Float {
     
-    public var xdScaled: CGFloat {
-        let multiplied = CGFloat(self).xdScaled
+    public var pps: CGFloat {
+        let multiplied = CGFloat(self).pps
         return multiplied
     }
     
@@ -29,8 +29,8 @@ extension Float {
 
 extension Double {
     
-    public var xdScaled: CGFloat {
-        let multiplied = CGFloat(self).xdScaled
+    public var pps: CGFloat {
+        let multiplied = CGFloat(self).pps
         return multiplied
     }
     
@@ -39,8 +39,8 @@ extension Double {
 extension NSNumber {
     
     @objc
-    public func xdScaled() -> NSNumber {
-        let multiplied = Double(self.doubleValue.xdScaled)
+    public func pps() -> NSNumber {
+        let multiplied = Double(self.doubleValue.pps)
         return NSNumber(value: multiplied)
     }
 }
