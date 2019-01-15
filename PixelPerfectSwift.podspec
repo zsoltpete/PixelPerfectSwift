@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
 s.name         = "PixelPerfectSwift"
-s.version      = "0.1.2"
+s.version      = "0.1.3"
 s.summary      = "Tool for easier create pixel perfect apps for every iPhones and iPads"
 s.license      = {type: "MIT", text: "DO NOT COPY!"}
 s.author       = { "petez" => "pete.zsolt95@gmail.com" }
