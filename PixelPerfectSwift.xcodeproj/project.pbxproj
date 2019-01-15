@@ -15,8 +15,34 @@
 		5487DE8521CEBB2F0020F384 /* Numbers+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5487DE8421CEBB2F0020F384 /* Numbers+Scale.swift */; };
 		5487DE8721CEBB540020F384 /* Devices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5487DE8621CEBB540020F384 /* Devices.swift */; };
 		5487DE8921CEBC240020F384 /* ScaleFactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5487DE8821CEBC240020F384 /* ScaleFactor.swift */; };
+		5499235A21EE7EFF0009898F /* PixelPerfectSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5487DE6221CEB93F0020F384 /* PixelPerfectSwift.framework */; };
+		5499235B21EE7EFF0009898F /* PixelPerfectSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5487DE6221CEB93F0020F384 /* PixelPerfectSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		54F0468F21CEC46F007FC758 /* PixelPerfectSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 54F0468E21CEC46F007FC758 /* PixelPerfectSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5499235C21EE7EFF0009898F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5487DE5921CEB93F0020F384 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5487DE6121CEB93F0020F384;
+			remoteInfo = PixelPerfectSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5499235E21EE7EFF0009898F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				5499235B21EE7EFF0009898F /* PixelPerfectSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5487DE6221CEB93F0020F384 /* PixelPerfectSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PixelPerfectSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5499235A21EE7EFF0009898F /* PixelPerfectSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,10 +177,12 @@
 				5487DE6D21CEB97F0020F384 /* Sources */,
 				5487DE6E21CEB97F0020F384 /* Frameworks */,
 				5487DE6F21CEB97F0020F384 /* Resources */,
+				5499235E21EE7EFF0009898F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5499235D21EE7EFF0009898F /* PBXTargetDependency */,
 			);
 			name = "PixelPerfectSwift-Example";
 			productName = "PixelPerfectSwift-Example";
@@ -239,6 +268,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5499235D21EE7EFF0009898F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5487DE6121CEB93F0020F384 /* PixelPerfectSwift */;
+			targetProxy = 5499235C21EE7EFF0009898F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5487DE7721CEB97F0020F384 /* Main.storyboard */ = {
@@ -440,6 +477,7 @@
 		5487DE8121CEB9810020F384 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AFEL4SQNP4;
@@ -458,6 +496,7 @@
 		5487DE8221CEB9810020F384 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AFEL4SQNP4;

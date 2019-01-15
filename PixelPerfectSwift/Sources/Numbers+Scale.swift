@@ -13,7 +13,7 @@ extension CGFloat {
     public var pps: CGFloat {
         let sFD = ScaleFactor.shared.scaleFactorDevice
         let currentDeviceWidth = UIScreen.main.nativeBounds.size.width
-        return currentDeviceWidth / (sFD == .custom ? ScaleFactor.shared.customWidth : sFD.rawValue)
+        return currentDeviceWidth / (sFD == .custom ? ScaleFactor.shared.customWidth : sFD.rawValue) * self
     }
     
 }
